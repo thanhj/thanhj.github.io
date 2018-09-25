@@ -1,7 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!doctype html>
+<html lang="en">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -10,9 +8,16 @@
 
   <!-- width=device-width to match the screen's width in device-independent pixels-->
   <!-- initial-scale=1 to establish a 1:1 relationship between CSS pixels and device-independent pixels.-->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Viewport meta tags using "width=device-width" cause the page to scale down to fit content that overflows the viewport bounds. You can override this behavior by adding "shrink-to-fit=no" to your meta tag as shown below. The added value will prevent the page from scaling to fit the viewport.-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="stylesheet" href="css/style.css"/>
+  <!--
+  Integrity attribute is to allow the browser to check the file source to ensure that the code is never loaded if the source has been manipulated.
+  Crossorigin attribute is present when a request is loaded using 'CORS' which is now a requirement of SRI checking when not loaded from the 'same-origin'.
+  -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/style-responsive.css"/>
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -31,22 +36,19 @@
   </noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-    <div id="page-wrap">
-
-        <img src="images/Photo_ID.JPG" alt="Photo of Thanh" id="pic" />
-
-        <div id="contact-info" class="vcard">
-
-            <!-- Microformats! -->
-            <h1 class="fn">Thanh - Software Engineer</h1>
-
-            <p>
-                <span class="tel">(+65)-xxxxxxxx</span><br />
-                Skype: <a href="skype:thanhnk00269?chat">Thanhnk00269</a><br />
-                <a href="https://www.linkedin.com/in/nguyenkythanh">Https://www.linkedin.com/in/nguyenkythanh</a><br />
-                <a class="email" href="mailto:johnky.nguyen@gmail.com">Johnky.nguyen@gmail.com</a>
-            </p>
-        </div>
+  <div class="container">
+    <div class="row" >
+      <div class="col-sm-12 col-md-3 col-lg-3">
+        <img class="img-thumbnail" src="images/Photo_ID.JPG" alt="Photo of Thanh" />
+      </div>
+      <div class="col-sm-12 col-md-9 col-lg-9">
+        <h1 class="fn">Thanh - Software Engineer</h1>
+        <p>
+            <span class="tel">(+65)-xxxxxxxx</span><br />
+            Skype: <a href="skype:thanhnk00269?chat">Thanhnk00269</a><br />
+            <a href="https://www.linkedin.com/in/nguyenkythanh">Https://www.linkedin.com/in/nguyenkythanh</a><br />
+            <a class="email" href="mailto:johnky.nguyen@gmail.com">Johnky.nguyen@gmail.com</a>
+        </p>
 
         <div id="objective">
             <ul>
@@ -55,132 +57,130 @@
               <li>In area of management and leadership, I have experience of leading small team and also working with offshore teams/vendors.</li>
             </ul>
         </div>
-
-        <div class="clear"></div>
-
-        <dl>
-
-            <dd class="clear"></dd>
-
-            <dt>Skills</dt>
-            <dd>
-                <h2>Backend - Java (Major)</h2>
-                <ul>
-                  <li>Spring Frameworks, Apache Karaf, Struts.</li>
-                  <li>JPA (Hibernate), MyBatis.</li>
-                  <li>OSGi, Apache Sling</li>
-                  <li>Adobe AEM (**), Magnolia CMS.</li>
-                  <li>Reactive Programming.</li>
-                </ul>
-
-                <h2>Database</h2>
-                <ul>
-                  <li>MySQL, SQLServer, Postgresql.</li>
-                  <li>Cassandra.</li>
-                  <li>MongoDB, DynamoDB.</li>
-                  <li>Apache Jackrabbit (JCR).</li>
-                </ul>
-
-                <h2>Frontend</h2>
-                <ul>
-                  <li>HTML, CSS.</li>
-                  <li>Jquery.</li>
-                  <li>ExtJs.</li>
-                  <li>ReactJS, AngularJS.</li>
-                  <li>KnockoutJS.</li>
-                </ul>
-
-                <h2>Infrastructure & DevOps</h2>
-                <ul>
-                  <li>AWS Ecosystem.</li>
-                  <li>Docker.</li>
-                  <li>Python, Ansible, SSH, Tunnel.</li>
-                  <li>Bamboo/Jenkins.</li>
-                  <li>Unix/Linux.</li>
-                  <li>Apache Httpd.</li>
-                  <li>Load Balancer/ELB.</li>
-                  <li>Content Delivery Network/AWS Cloudfront.</li>
-                </ul>
-
-                <h2>Architecture</h2>
-                <ul>
-                  <li>Micro-services.</li>
-                  <li>CMS/AEM Base System.</li>
-                  <li>Multilevel Caching.</li>
-                </ul>
-
-                <h2>Others</h2>
-                <ul>
-                  <li>Able to estimate load capacity some kind of web system.</li>
-                  <li>Experience in optimization in some kind of web system.</li>
-                  <li>GIT Flow/One Flow.</li>
-                  <li>Maven, Gradle</li>
-                  <li>Continueus Inspection (SonarQube), Continueus Integration, Continues Delivery/Deployment.</li>
-                  <li>Apache Solr (Enterprise Search platform).</li>
-                  <li>Google Analytics, Google Tag Manager, Adobe Analytics</li>
-                </ul>
-
-                <h2>Development methodology</h2>
-                <ul>
-                  <li>TDD (Test Driven Development).</li>
-                  <li>FDD (Feature Driven Development).</li>
-                </ul>
-            </dd>
-
-            <dd class="clear"></dd>
-
-            <dt>Experience</dt>
-            <dd>
-                <h2>Singtel <span>Software Engineer - Singapore - 2017-Now</span></h2>
-                <ul>
-                    <li>Tech Lead/Developer for <a href="https://www.singtel.com/" target="_blank">Singtel platform</a>.</li>
-                    <li>Providing and reviewing solution design, and working with interal teams and Offshore teams/vendors.</li>
-                </ul>
-
-                <h2>Amdocs <span>Software Engineer - Australia, NSW - 2016-2017</span></h2>
-                <ul>
-                    <li>Developer for <a href="https://www.optus.com.au/" target="_blank">Optus portal</a>.</li>
-                </ul>
-
-                <h2>Singapore NCS <span>Software Engineer - Singapore - 2014-2016</span></h2>
-                <ul>
-                    <li>Architecture/Tech lead of <a href="https://www.myskillsfuture.sg" target="_blank">https://www.myskillsfuture.sg</a>.</li>
-                    <li>Tech lead/Developer of <a href="https://www.smeportal.sg" target="_blank">https://www.smeportal.sg</a>.</li>
-                </ul>
-
-                <h2>Pycogroup <br/>
-                  Saigon Defide <br/>
-                  FPT Software <span>Software Engineer - Vietnam - 2011-2014</span></h2>
-            </dd>
-
-            <dd class="clear"></dd>
-
-            <dt>Education</dt>
-            <dd>
-                <h2>FPT University - 4 Year Bachelor</h2>
-                <p><strong>Major:</strong> Software Engineering<br />
-                   <strong>Minor:</strong> Embedded System</p>
-            </dd>
-
-            <dd class="clear"></dd>
-
-            <dt>Hobbies</dt>
-            <dd>Hydroponic, IoT, Adruino, Renewable Energy </dd>
-
-            <dd class="clear"></dd>
-
-            <dt>References</dt>
-            <dd>Available on request</dd>
-
-            <dd class="clear"></dd>
-        </dl>
-
-        <div class="clear"></div>
-        <br/>
-        <div class="footer">
-          <h2><span>Updated on 2018-09-24</span></h2>
-        </div>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-10 offset-md-1">
+        <dt>Skills</dt>
+        <dd>
+            <h4>Backend - Java (Major)</h4>
+            <ul>
+              <li>Spring Frameworks, Apache Karaf, Struts.</li>
+              <li>JPA (Hibernate), MyBatis.</li>
+              <li>OSGi, Apache Sling</li>
+              <li>Adobe AEM (**), Magnolia CMS.</li>
+              <li>Reactive Programming.</li>
+            </ul>
+
+            <h4>Database</h4>
+            <ul>
+              <li>MySQL, SQLServer, Postgresql.</li>
+              <li>Cassandra.</li>
+              <li>MongoDB, DynamoDB.</li>
+              <li>Apache Jackrabbit (JCR).</li>
+            </ul>
+
+            <h4>Frontend</h4>
+            <ul>
+              <li>HTML, CSS.</li>
+              <li>Jquery.</li>
+              <li>ExtJs.</li>
+              <li>ReactJS, AngularJS.</li>
+              <li>KnockoutJS.</li>
+            </ul>
+
+            <h4>Infrastructure & DevOps</h4>
+            <ul>
+              <li>AWS Ecosystem.</li>
+              <li>Docker.</li>
+              <li>Python, Ansible, SSH, Tunnel.</li>
+              <li>Bamboo/Jenkins.</li>
+              <li>Unix/Linux.</li>
+              <li>Apache Httpd.</li>
+              <li>Load Balancer/ELB.</li>
+              <li>Content Delivery Network/AWS Cloudfront.</li>
+            </ul>
+
+            <h4>Architecture</h4>
+            <ul>
+              <li>Micro-services.</li>
+              <li>CMS/AEM Base System.</li>
+              <li>Multilevel Caching.</li>
+            </ul>
+
+            <h4>Others</h4>
+            <ul>
+              <li>Able to estimate load capacity some kind of web system.</li>
+              <li>Experience in optimization in some kind of web system.</li>
+              <li>GIT Flow/One Flow.</li>
+              <li>Maven, Gradle</li>
+              <li>Continueus Inspection (SonarQube), Continueus Integration, Continues Delivery/Deployment.</li>
+              <li>Apache Solr (Enterprise Search platform).</li>
+              <li>Google Analytics, Google Tag Manager, Adobe Analytics</li>
+            </ul>
+
+            <h4>Development methodology</h4>
+            <ul>
+              <li>TDD (Test Driven Development).</li>
+              <li>FDD (Feature Driven Development).</li>
+            </ul>
+          </dd>
+
+          <dd class="clear"></dd>
+
+          <dt>Experience</dt>
+          <dd>
+              <h4>Singtel <span>Software Engineer - Singapore - 2017-Now</span></h4>
+              <ul>
+                  <li>Tech Lead/Developer for <a href="https://www.singtel.com/" target="_blank">Singtel platform</a>.</li>
+                  <li>Providing and reviewing solution design, and working with interal teams and Offshore teams/vendors.</li>
+              </ul>
+
+              <h4>Amdocs <span>Software Engineer - Australia, NSW - 2016-2017</span></h4>
+              <ul>
+                  <li>Developer for <a href="https://www.optus.com.au/" target="_blank">Optus portal</a>.</li>
+              </ul>
+
+              <h4>Singapore NCS <span>Software Engineer - Singapore - 2014-2016</span></h4>
+              <ul>
+                  <li>Architecture/Tech lead of <a href="https://www.myskillsfuture.sg" target="_blank">https://www.myskillsfuture.sg</a>.</li>
+                  <li>Tech lead/Developer of <a href="https://www.smeportal.sg" target="_blank">https://www.smeportal.sg</a>.</li>
+              </ul>
+
+              <h4>Pycogroup and Others <span>Software Engineer - Vietnam - 2011-2014</span></h4>
+          </dd>
+
+          <dd class="clear"></dd>
+
+          <dt>Education</dt>
+          <dd>
+              <h4>FPT University - 4 Year Bachelor</h4>
+              <p><strong>Major:</strong> Software Engineering<br />
+                 <strong>Minor:</strong> Embedded System</p>
+          </dd>
+
+          <dd class="clear"></dd>
+
+          <dt>Hobbies</dt>
+          <dd>Hydroponic, IoT, Adruino, Renewable Energy </dd>
+
+          <dd class="clear"></dd>
+
+          <dt>References</dt>
+          <dd>Available on request</dd>
+
+          <dd class="clear"></dd>
+      </dl>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="footer">
+          <span>Updated on 2018-09-24</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
