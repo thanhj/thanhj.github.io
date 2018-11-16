@@ -8,10 +8,10 @@ $(function() {
     $.getJSON("https://api.github.com/repos/thanhj/thanhj.github.io/commits", function(data) {
         if (data && data.length > 0){
           var latestChange = data[0];
-          var title = "Change: " + latestChange.commit.message + ' | By ' + latestChange.commit.committer.name;
+          var title = "Change: " + latestChange.commit.message + ' | By ' + latestChange.commit.author.name;
           self.commitTitle(title);
           self.commitLink(latestChange.html_url);
-          self.lastCommit(moment(latestChange.commit.committer.date).format('ll'));
+          self.lastCommit(moment(latestChange.commit.author.date).format('ll'));
         }
     });
   }
